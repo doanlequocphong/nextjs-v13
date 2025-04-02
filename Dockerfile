@@ -14,6 +14,7 @@ RUN yarn install --verbose
 
 # Sao chép tất cả mã nguồn từ thư mục hiện tại vào container
 COPY . .
+ENV NODE_ENV development
 ENV NEXT_TELEMETRY_DISABLED 1
 
 # Mở port mà ứng dụng Next.js sẽ chạy (mặc định là 3000)
