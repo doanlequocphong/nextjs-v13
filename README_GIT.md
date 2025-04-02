@@ -1,0 +1,14 @@
+# Git install
+- git init
+- git config user.name "<name>"
+- git config user.email "<name>@gmail.com"
+- ssh-keygen -t rsa -b 4096 -C "<name>@gmail.com"
+- cat ~/.ssh/id_rsa.pub
+- Github -> tạo ssh với key trên
+- git remote add origin git@github.com:doanlequocphong/nextjs-v13.git
+- git remote set-url git@github.com:doanlequocphong/nextjs-v13.git
+- git pull origin main
+- git checkout main
+- git add .
+- git commit -m "Initial commit"
+- git push origin main <-f>
