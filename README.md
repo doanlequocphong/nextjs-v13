@@ -1,2 +1,2 @@
 # nextjs-v13
-NextJs V13
+NextJs Version 13
