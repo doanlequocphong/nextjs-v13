@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  nextjsv13:
+    build: .
+    container_name: nextjsv13-app
+    ports:
+      - "${NEXT_PORT:-3000}:3000" # Sử dụng biến môi trường NEXT_PORT, nếu không có, mặc định là 3000
+    volumes:
+      - .:/app # Mount mã nguồn vào container, giúp dễ dàng phát triển
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+      - NEXT_PORT=${NEXT_PORT:-3000}  # Sử dụng biến môi trường NEXT_PORT, nếu không có, mặc định là 3000
+    # command: npm run dev
+    command: yarn dev
