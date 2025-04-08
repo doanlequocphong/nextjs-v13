@@ -11,6 +11,10 @@ COPY package.json yarn.lock ./
 # Cài đặt dependencies sử dụng Yarn
 # --verbose để xem thông báo lỗi đầy đủ
 RUN yarn install --verbose
+# --frozen-lockfile : 
+#     + cài đặt đúng với trạng thái của tệp yarn.lock
+#     + nếu yarn.lock không khớp với package.json  (ví dụ: nếu có sự thay đổi trong package.json mà chưa cập nhật lại yarn.lock), quá trình cài đặt sẽ bị dừng và thông báo lỗi
+# RUN yarn install --frozen-lockfile --verbose
 
 # Sao chép tất cả mã nguồn từ thư mục hiện tại vào container
 COPY . .
